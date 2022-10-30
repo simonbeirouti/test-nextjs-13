@@ -1,11 +1,9 @@
 import Hero from "../../components/Hero";
-import PostsList from "../../components/PostsList";
 
 export default function PostsPage() {
   return (
-    <>
-      <Hero intro="Posts" text="Just some posts about different things!" />
-      <PostsList />
-    </>
+    <div className="flex justify-center items-center">
+      <Hero intro="Posts" text="Choose a post on the left to get started!" />
+    </div>
   );
 }
