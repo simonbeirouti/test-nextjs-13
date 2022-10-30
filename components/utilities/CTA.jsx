@@ -21,9 +21,9 @@ export default function CTA() {
             <span className="border-b-8 border-orange-300">Simon</span>.
           </h2>
           <p className="max-w-xl mx-auto mt-6 text-xl text-gray-600 md:mt-10">
-            I'm on a mission to build things that make a difference. I've
-            started with my own site! You'll need to create an account to access
-            it.
+            I&apos;m on a mission to build things that make a difference.
+            I&apos;ve started with my own site! You&apos;ll need to create an
+            account to access it.
           </p>
         </div>
       </div>

@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function ExperienceCard({ key, status, summary, date, name }) {
   return (
     <>
@@ -7,10 +9,12 @@ export default function ExperienceCard({ key, status, summary, date, name }) {
           key={key}
         >
           <div className="flex-shrink-0 overflow-hidden aspect-w-1 aspect-h-1">
-            <img
+            <Image
               className="object-cover w-full h-full transition-all duration-300 group-hover:scale-125"
               src="https://cdn.rareblocks.xyz/collection/clarity-ecommerce/images/item-cards/3/product-1.png"
               alt=""
+              width={300}
+              height={300}
             />
           </div>
           <div className="flex flex-col flex-1 px-4 py-5 sm:px-5 sm:py-6">
@@ -35,10 +39,12 @@ export default function ExperienceCard({ key, status, summary, date, name }) {
           key={key}
         >
           <div className="flex-shrink-0 overflow-hidden aspect-w-1 aspect-h-1">
-            <img
+            <Image
               className="object-cover w-full h-full transition-all duration-300 group-hover:scale-125"
               src="https://cdn.rareblocks.xyz/collection/clarity-ecommerce/images/item-cards/3/product-1.png"
               alt=""
+              width={300}
+              height={300}
             />
           </div>
           <div className="flex flex-col flex-1 px-4 py-5 sm:px-5 sm:py-6">
@@ -63,10 +69,12 @@ export default function ExperienceCard({ key, status, summary, date, name }) {
           key={key}
         >
           <div className="flex-shrink-0 overflow-hidden aspect-w-1 aspect-h-1">
-            <img
+            <Image
               className="object-cover w-full h-full transition-all duration-300 group-hover:scale-125"
               src="https://cdn.rareblocks.xyz/collection/clarity-ecommerce/images/item-cards/3/product-1.png"
               alt=""
+              width={300}
+              height={300}
             />
           </div>
           <div className="flex flex-col flex-1 px-4 py-5 sm:px-5 sm:py-6">
