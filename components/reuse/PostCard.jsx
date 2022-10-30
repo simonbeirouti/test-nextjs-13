@@ -1,73 +1,38 @@
+import Link from "next/link";
 import Image from "next/image";
 
-export default function PostCard({
-  key,
-  title,
-  snippet,
-  category,
-  date,
-  image,
-}) {
+export default function PostCard({ posts }) {
   return (
-    <div
-      className="overflow-hidden transition-all duration-200 transform bg-white border border-gray-100 shadow group rounded-xl hover:shadow-lg hover:-translate-y-1"
-      key={key}
-    >
-      <div className="flex flex-col sm:flex-row">
-        <a href="#" title="" className="flex overflow-hidden shrink-0">
-          <Image
-            className="object-cover w-full h-56 transition-all duration-200 transform group-hover:scale-110 sm:h-auto sm:w-56"
-            src={image}
-            alt=""
-            height={56}
-            width={56}
-          />
-        </a>
+    <>
+      {posts.map((post) => (
+        <Link href={`/posts/${post.id}`} title="" className="" key={post.id}>
+          <div className="relative mt-3 overflow-hidden transition-all duration-200 bg-white border border-gray-200 rounded-lg hover:shadow-lg hover:bg-gray-50 hover:-translate-y-1">
+            <div className="p-4">
+              <div className="flex items-start lg:items-center">
+                <Image
+                  className="object-cover rounded-lg shrink-0"
+                  src={post.image}
+                  alt=""
+                  width={100}
+                  height={100}
+                />
 
-        <div className="flex flex-col px-4 py-5 sm:p-6">
-          <div className="flex-1">
-            <p className="text-xl font-bold text-gray-900">
-              <a href="#" title="" className="">
-                {title}
-              </a>
-            </p>
-            <p className="mt-4 text-sm font-normal leading-6 text-gray-500">
-              {snippet}
-            </p>
-          </div>
-
-          <div className="pt-6 mt-auto border-t border-gray-100">
-            <div className="flex items-center justify-between">
-              <div className="flex items-center space-x-2">
-                <p className="text-sm font-medium text-gray-900">
-                  <a href="#" title="" className="">
-                    {category}
-                  </a>
-                </p>
-                <span className="text-sm font-medium text-gray-900">•</span>
-                <p className="text-sm font-medium text-gray-900">{date}</p>
+                <div className="ml-5">
+                  <p className="text-sm font-medium text-gray-900">
+                    {post.date}
+                  </p>
+                  <p className="text-lg leading-7 font-bold text-gray-900 mt-2.5">
+                    {post.title}
+                  </p>
+                  <p className="text-sm mt-2.5 font-medium text-gray-900">
+                    {post.category}
+                  </p>
+                </div>
               </div>
-
-              <a href="#" title="" className="" role="button">
-                <svg
-                  className="w-5 h-5 text-gray-300 transition-all duration-200 group-hover:text-gray-900"
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                  strokeWidth="2"
-                  stroke="currentColor"
-                  fill="none"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                >
-                  <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                  <line x1="17" y1="7" x2="7" y2="17"></line>
-                  <polyline points="8 7 17 7 17 16"></polyline>
-                </svg>
-              </a>
             </div>
           </div>
-        </div>
-      </div>
-    </div>
+        </Link>
+      ))}
+    </>
   );
 }
