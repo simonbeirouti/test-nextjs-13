@@ -10,12 +10,14 @@ export default function Error({ error, reset }) {
   return (
     <div className="flex justify-center items-center">
       <Hero intro="Error" text={error.message} />
-      <button
-        className=" text-black text-center block px-3 py-2 text-base font-medium bg-gray-100 border rounded-xl hover:bg-gray-600 hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900"
-        onClick={() => reset()}
-      >
-        Reset error
-      </button>
+      <div>
+        <button
+          className=" text-black text-center block px-3 py-2 text-base font-medium bg-gray-100 border rounded-xl hover:bg-gray-600 hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900"
+          onClick={() => reset()}
+        >
+          Reset error
+        </button>
+      </div>
     </div>
   );
 }
