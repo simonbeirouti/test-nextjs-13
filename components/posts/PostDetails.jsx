@@ -1,4 +1,4 @@
-// import Image from "next/image";
+import Image from "next/image";
 
 export default function PostDetails({ post }) {
   return (
@@ -14,7 +14,7 @@ export default function PostDetails({ post }) {
           </p>
         </div>
       </header>
-      {/* <div className="mt-12 sm:mt-16 aspect-w-16 aspect-h-9 lg:aspect-h-6">
+      <div className="mt-12 sm:mt-16 aspect-w-16 aspect-h-9 lg:aspect-h-6">
         <Image
           className="object-cover w-full h-full"
           src={post.image}
@@ -22,7 +22,7 @@ export default function PostDetails({ post }) {
           width={100}
           height={100}
         />
-      </div> */}
+      </div>
       <div className="max-w-3xl mx-auto mt-4">
         <p className="text-lg font-bold text-gray-900 lg:text-lg">
           {post.content}
