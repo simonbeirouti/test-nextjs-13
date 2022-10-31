@@ -1,6 +1,6 @@
 import { PrismaClient } from "@prisma/client";
 
-import PostDetails from "../../../components/reuse/PostDetails";
+import PostDetails from "../../../components/posts/PostDetails";
 
 export default async function IssueDetailsPage({ params }) {
   const prisma = new PrismaClient();

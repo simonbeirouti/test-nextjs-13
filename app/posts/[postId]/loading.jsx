@@ -1,4 +1,4 @@
-import Hero from "../../../components/Hero";
+import Hero from "../../../components/utilities/Hero";
 
 export default function PostLoadingPage() {
   return (
