@@ -18,7 +18,7 @@ export default function ExperienceCard({ experiences }) {
             </div>
             <div className="flex flex-col flex-1 px-4 py-5 sm:px-5 sm:py-6">
               <p className="text-xs font-bold tracking-wide text-gray-400 uppercase">
-                {experience.name}
+                {experience.title}
               </p>
               <h3 className="text-sm sm:text-base font-bold text-gray-900 flex-1 mt-2.5">
                 <a href="#" title="">
