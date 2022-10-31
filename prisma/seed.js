@@ -6,7 +6,9 @@ const expData = [
     summary:
       "Good coffee and vibes amongst other things, just the change to chat and connect ",
     date: "Jan 17, 2022",
-    name: "Juno Eatery",
+    title: "Juno Eatery",
+    image:
+      "https://cdn.rareblocks.xyz/collection/clarity-ecommerce/images/item-cards/3/product-1.png",
     url: "https://simonbeirouti.com",
   },
   {
@@ -14,7 +16,9 @@ const expData = [
     summary:
       "Good coffee and vibes amongst other things, just the change to chat and connect ",
     date: "Jan 17, 2022",
-    name: "Juno Eatery",
+    title: "Juno Eatery",
+    image:
+      "https://cdn.rareblocks.xyz/collection/clarity-ecommerce/images/item-cards/3/product-1.png",
     url: "https://simonbeirouti.com",
   },
   {
@@ -22,7 +26,9 @@ const expData = [
     summary:
       "Good coffee and vibes amongst other things, just the change to chat and connect ",
     date: "Jan 17, 2022",
-    name: "Juno Eatery",
+    title: "Juno Eatery",
+    image:
+      "https://cdn.rareblocks.xyz/collection/clarity-ecommerce/images/item-cards/3/product-1.png",
     url: "https://simonbeirouti.com",
   },
   {
@@ -30,7 +36,9 @@ const expData = [
     summary:
       "Good coffee and vibes amongst other things, just the change to chat and connect ",
     date: "Jan 17, 2022",
-    name: "Juno Eatery",
+    title: "Juno Eatery",
+    image:
+      "https://cdn.rareblocks.xyz/collection/clarity-ecommerce/images/item-cards/3/product-1.png",
     url: "https://simonbeirouti.com",
   },
   {
@@ -38,7 +46,9 @@ const expData = [
     summary:
       "Good coffee and vibes amongst other things, just the change to chat and connect ",
     date: "Jan 17, 2022",
-    name: "Juno Eatery",
+    title: "Juno Eatery",
+    image:
+      "https://cdn.rareblocks.xyz/collection/clarity-ecommerce/images/item-cards/3/product-1.png",
     url: "https://simonbeirouti.com",
   },
 ];
@@ -112,11 +122,31 @@ const postData = [
   },
 ];
 
+const statData = [
+  {
+    title: "Years in business",
+    value: "6+",
+  },
+  {
+    title: "Team members",
+    value: "37+",
+  },
+  {
+    title: "Projects delivered",
+    value: "3,274",
+  },
+  {
+    title: "Customer rating",
+    value: "98%",
+  },
+];
+
 async function seed() {
   const prisma = new PrismaClient();
   await prisma.post.deleteMany();
   await prisma.project.deleteMany();
   await prisma.experience.deleteMany();
+  await prisma.stat.deleteMany();
 
   // Loop through expData and create a new experience for each object
   for (const exp of expData) {
@@ -138,6 +168,14 @@ async function seed() {
       data: post,
     });
   }
+
+  // Loop through postData and create a new experience for each object
+  for (const stat of statData) {
+    await prisma.stat.create({
+      data: stat,
+    });
+  }
+
   prisma.$disconnect();
 }
 

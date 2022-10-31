@@ -30,9 +30,16 @@ model Project {
 
 model Experience {
   id      Int    @id @default(autoincrement())
-  name    String
-  summary String
-  rating  String
+  title   String
   date    String
+  summary String
+  image   String
+  rating  String
   url     String
+}
+
+model Stat {
+  id    Int    @id @default(autoincrement())
+  title String
+  value String
 }
