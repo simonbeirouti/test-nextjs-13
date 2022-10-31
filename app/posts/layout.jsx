@@ -1,5 +1,5 @@
 import { PrismaClient } from "@prisma/client";
-import PostCard from "../../components/reuse/PostCard";
+import PostCard from "../../components/posts/PostCard";
 
 export default async function PostsLayout({ children }) {
   const prisma = new PrismaClient();
