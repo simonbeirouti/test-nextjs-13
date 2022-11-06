@@ -82,14 +82,14 @@ const MobileMenu = () => (
         </Link>
       ))}
     </div>
-    <div className="px-2 py-4 space-y-1 sm:px-3 border-t border-gray-400">
+    {/* <div className="px-2 py-4 space-y-1 sm:px-3 border-t border-gray-400">
       <Link
         href="/profile"
         className=" text-black text-center block px-3 py-2 text-base font-medium bg-gray-100 border rounded-xl hover:bg-gray-600 hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900"
       >
         Profile
       </Link>
-    </div>
+    </div> */}
   </div>
 );
 
@@ -137,7 +137,7 @@ export default function Header() {
               </div>
             </div>
           </div>
-          <div className="hidden md:block">
+          {/* <div className="hidden md:block">
             <div className="hidden md:ml-auto sm:flex md:items-center md:space-x-4 xl:space-x-6">
               <Link
                 href="/profile"
@@ -153,7 +153,7 @@ export default function Header() {
                 Sign out
               </Link>
             </div>
-          </div>
+          </div> */}
           <div className="-mr-2 flex md:hidden">
             <MenuButton showMenu={showMenu} toggleMenu={toggleMenu} />
           </div>
